@@ -1,0 +1,42 @@
+body {
+	background-color: #ebecf0;	
+	font-family: tisa;
+	color: #333333;
+	/*background-image: linear-gradient(to bottom right, red, yellow);*/
+}
+
+.main-title {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 60px;
+}
+
+.presentation {
+	background-color: #fff;
+	display: block;
+	overflow: auto;
+	width: 70%;
+	margin: 0 auto;
+	box-shadow: 0 0 10px gray;
+	padding: 20px;
+}
+
+.pres-left {
+	float: left;
+}
+
+.pres-right {
+	float: right;
+}
+
+.pres-left, .pres-right {
+	width: 40%;
+	box-shadow: 0 0 10px gray;
+	display: block;
+}
+
+.presentation p {
+	font-size: 20px;
+	padding: 10px;
+}
