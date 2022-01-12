@@ -1,3 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	background-color: #ebecf0;	
 	font-family: tisa;
@@ -39,4 +45,32 @@ body {
 .presentation p {
 	font-size: 20px;
 	padding: 10px;
+}
+
+
+
+/*---------- marcas ----------*/
+.brands{
+	margin:	100px auto;
+}
+.col-5{
+	flex: 16.6%;
+	padding: 20px;
+}
+.col-5 img{
+	width:	100%;
+	cursor: pointer;
+	filter: grayscale(100%);
+}
+.col-5 img:hover{
+	filter: grayscale(0);
+}
+
+.row{
+	margin:	100px auto;
+	max-width: 1080px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
