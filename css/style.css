@@ -9,82 +9,60 @@ body {
 	background-color: #ebecf0;	
 	font-family: tisa;
 	color: #333333;
-	background-image: linear-gradient(to bottom right, #0074FF, #70FF00);
+	
 }
 
-.headerPresentation {
+section	{
+	
+	
+	border: 1px solid red;
+}
+
+#headerPresentation {
+	background-image: linear-gradient(to bottom, #0074FF, #ebecf0);
 	margin: 0 auto;
 	width: 100%;
-	padding: 15%;
+	height: 100vh;
+	padding: 5%;
 	position: relative;
-	border: 1px solid green;
+	border: 0px solid green;
 }
 
 .main-title {
-	/*text-align: center;*/
-	/*padding-top: 30px;*/
-	/*padding-bottom: 30px;*/
 	font-size: 60px;
 	width: 500px;
 	left: 20px;
 	top: 20px;
-	/*float: left;*/
-	position: absolute;
+	position: relative;
+}
+
+.main-subtitle {
+	font-size: 30px;
+	width: 500px;
+	top: 30px;
+	position: relative;
 }
 
 #coffee {
-	width: 400px;
+	height: 50%;
 	right: 0;
 	top: 0;
 	position: absolute;
 	border: 0px solid blue;
 }
 
-.presentation {
-	background-color: #fff;
-	display: block;
-	overflow: auto;
-	width: 70%;
-	margin: 20px auto;
-	box-shadow: 0 0 10px gray;
-	padding: 20px;
-}
 
-.pres-left {
-	float: left;
-}
-
-.pres-right {
-	float: right;
-}
-
-.pres-left, .pres-right {
-	width: 40%;
-	box-shadow: 0 0 10px gray;
-	display: block;
-}
-
-.presentation p {
-	font-size: 20px;
-	padding: 10px;
-}
 
 @media only screen and (max-width: 925px) {
 
-
-	#coffee {
-		width: 45%;
-	}
-
 	.main-title {
-		font-size: 30px;
-		width: 45%;		
+		font-size: 40px;
 	}
 }
 
 
 
-/*---------- marcas ----------*/
+/*---------- brands ----------*/
 .brands{
 	margin:	100px auto;
 }
