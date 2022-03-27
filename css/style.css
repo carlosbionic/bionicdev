@@ -6,20 +6,27 @@
 }
 
 body {
-	background-color: #ebecf0;	
+	background-color: #212121;	
 	font-family: tisa;
-	color: #333333;
-	
+	color: #F0F0F0;
 }
 
 section	{
-	
-	
-	border: 1px solid red;
+	border: 0px solid red;
+	margin: 0 auto;
+	width: 80%;
+}
+
+h2 {
+	margin: 40px 0 20px 20px;
+}
+
+p {
+	margin: 20px;
 }
 
 #headerPresentation {
-	background-image: linear-gradient(to bottom, #0074FF, #ebecf0);
+	background-image: linear-gradient(to bottom, #000339, #212121);
 	margin: 0 auto;
 	width: 100%;
 	height: 100vh;
@@ -29,17 +36,18 @@ section	{
 }
 
 .main-title {
-	font-size: 60px;
-	width: 500px;
+	font-size: 80px;
+	/*width: 500px;*/
 	left: 20px;
-	top: 20px;
+	top: 150px;
 	position: relative;
 }
 
 .main-subtitle {
 	font-size: 30px;
 	width: 500px;
-	top: 30px;
+	left: 50px;
+	top: 180px;
 	position: relative;
 }
 
@@ -52,7 +60,7 @@ section	{
 }
 
 #portfolio {
-	width: 80%;
+	/*width: 80%;*/
 }
 
 .portfolioItems {
@@ -64,7 +72,7 @@ section	{
 
 .square {
   position: relative;
-  border: 1px solid;
+  border: 0px solid;
   box-sizing: border-box;
 }
 
@@ -83,6 +91,27 @@ section	{
 	height: 100%;
 }
 
+.Brands {
+	background-color: rgba(0,0,0,0);
+	border: 0;
+}
+
+.portfolioSingleItem img {
+	position: absolute;
+	width: 70%;	
+	left: 50%;
+	top: 50%;
+	margin-left: -35%;
+	margin-top: -35%;
+	filter: opacity(0.7);
+	transition: 0.5s ease;
+}
+
+.portfolioSingleItem img:hover {
+	filter: opacity(1);
+	transition: 0.5s ease;
+}
+
 
 @media only screen and (max-width: 925px) {
 
@@ -92,6 +121,10 @@ section	{
 
 	.portfolioItems {
 		grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	}
+
+	section {
+		width: 100%;
 	}
 }
 
