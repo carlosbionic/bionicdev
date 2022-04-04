@@ -116,6 +116,10 @@ p {
 
 @media only screen and (max-width: 925px) {
 
+	#coffee {
+		height: 25%;
+	}
+
 	.main-title {
 		font-size: 40px;
 	}
@@ -125,7 +129,7 @@ p {
 	}
 
 	section {
-		width: 100%;
+		width: 98%;
 	}
 }
 
