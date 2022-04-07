@@ -5,4 +5,4 @@
 
 * The idea for this website is to be a simple landing page with some information about my work.
 
-* The website can be seen in this link: https://carlosbionic.github.io/bionicfisica/
+* The website can be seen in this link: https://carlosbionic.github.io/bionicdev/
