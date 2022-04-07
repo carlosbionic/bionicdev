@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif&display=swap');
+
 *{
 	margin: 0;
 	padding: 0;
@@ -7,7 +9,7 @@
 
 body {
 	background-color: #212121;	
-	font-family: tisa;
+	font-family: 'Noto Serif', serif;
 	color: #F0F0F0;
 	font-size: 18px;
 }
@@ -16,10 +18,24 @@ section	{
 	border: 0px solid red;
 	margin: 0 auto;
 	width: 80%;
+
 }
 
 h2 {
 	margin: 40px 0 20px 20px;
+	display: inline-block;
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #E7E8FF;
+	/*text-shadow: 0 0 0px #FFB7B7;*/
+	transition: ease 0.2s;
+}
+
+h2:hover {
+	letter-spacing: 6px;
+	color: #BBFFB4;
+	transition: ease 0.2s;
 }
 
 p {
@@ -27,6 +43,7 @@ p {
 }
 
 #headerPresentation {
+	font-family: 'Abril Fatface', cursive;
 	background-image: linear-gradient(to bottom, #000339, #212121);
 	margin: 0 auto;
 	width: 100%;
