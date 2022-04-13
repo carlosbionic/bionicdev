@@ -20,6 +20,7 @@
 </head>
 <body>
 
+
 <section id="headerPresentation">
 	<img id="coffee" src="images/coffee1.svg">
 	<p class="main-title">Hello! I'm Carlos</p>
@@ -27,15 +28,17 @@
 		
 </section>
 
+
+
 <section id="portfolio">
 	<h2>My Portfolio</h2>
 	<p>Here is a list of my projects. Some of them were made for clients all around the World. Other are personal projects made for me, or just to learn.</p>
 
 	<div class="portfolioItems">
-		<div class="square"><div class="portfolioSingleItem"></div></div>
-		<div class="square"><div class="portfolioSingleItem"></div></div>
-		<div class="square"><div class="portfolioSingleItem"></div></div>
-		<div class="square"><div class="portfolioSingleItem"></div></div>
+		<div class="square"><div class="portfolioSingleItem"><img class="myImages" src="images/portfolio/plotly1.jpg"></div></div>
+		<div class="square"><div class="portfolioSingleItem"><img class="myImages" src="images/portfolio/plotly2.jpg"></div></div>
+		<div class="square"><div class="portfolioSingleItem"><img class="myImages" src="images/portfolio/plotly3.jpg"></div></div>
+		<div class="square"><div class="portfolioSingleItem"><img class="myImages" src="images/portfolio/plotly4.jpg"></div></div>
 		<div class="square"><div class="portfolioSingleItem"></div></div>
 		<div class="square"><div class="portfolioSingleItem"></div></div>
 		<div class="square"><div class="portfolioSingleItem"></div></div>
@@ -56,24 +59,24 @@
 <!--------- brands ----------->
 
 	<div class="portfolioItems">
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-python.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-numpy.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-jupyter.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-pandas.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-sklearn.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-tf.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-html.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-css.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-js.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-php.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-bootstrap.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-django.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-matlab.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-latex.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-overleaf.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-comsol.svg"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-csv.png"></div></div>
-		<div class="square"><div class="Brands portfolioSingleItem"><img src="images/logos/logo-python.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-python.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-numpy.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-jupyter.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-pandas.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-sklearn.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-tf.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-html.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-css.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-js.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-php.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-bootstrap.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-django.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-matlab.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-latex.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-overleaf.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-comsol.svg"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-csv.png"></div></div>
+		<div class="squareBrands"><div class="Brands"><img src="images/logos/logo-python.png"></div></div>
 	</div>
 
 </section>
@@ -94,6 +97,39 @@
 </section>
 
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <!--<div id="caption"></div>-->
+  <img class="modal-content" id="img01">
+</div>
+
+<script>
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    console.log(evt);
+
+
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+}
+
+// close the modal when clicked anywhere
+modal.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
 
 </body>
 </html>
