@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap');
 
 *{
 	margin: 0;
@@ -45,7 +45,10 @@ p {
 }
 
 #headerPresentation {
-	font-family: 'Abril Fatface', cursive;
+	/*font-family: 'Abril Fatface', cursive;*/
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 4px;
+	text-transform: uppercase;
 	background-image: linear-gradient(to bottom, #000339, #212121);
 	margin: 0 auto;
 	width: 100%;
@@ -57,6 +60,7 @@ p {
 
 .main-title {
 	font-size: 80px;
+	font-weight: bold;
 	/*width: 500px;*/
 	left: 20px;
 	top: 150px;
@@ -64,8 +68,8 @@ p {
 }
 
 .main-subtitle {
-	font-size: 30px;
-	width: 500px;
+	font-size: 25px;
+	/*width: 400px;*/
 	left: 50px;
 	top: 180px;
 	position: relative;
@@ -163,7 +167,6 @@ p {
 	left: 0;
 	width: 100%;
 	height: 100%;
-
 	background-color: rgba(0,0,0,0);
 	border: 0;
 }
@@ -187,6 +190,52 @@ p {
 
 
 
+.blogItems {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	grid-auto-rows: 200px;
+	column-gap: 8px;
+	grid-row-gap: 8px;
+}	
+
+
+.rectBlog {
+  position: relative;
+  border: 0px solid;
+  box-sizing: border-box;
+  box-shadow: 0 0 6px #fff;
+  background-color: #1a1a1a;
+  transition: .3s ease;
+}
+
+.rectBlog:hover {
+	box-shadow: 0 0 14px #fff;
+	background-color: #303030;
+	transition: .3s ease;
+}
+
+.rectBlog::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.singleBlog {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	border: 0;
+	padding: 20px;
+}
+
+.singleBlog p {
+	font-size: 15px;
+}
+
+
 @media only screen and (max-width: 925px) {
 
 	#coffee {
@@ -200,6 +249,13 @@ p {
 	.portfolioItems {
 		grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 	}
+
+	.blogItems {
+		/*grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));*/
+		grid-template-columns: 90%;
+		justify-content: center;
+	}
+
 
 	section {
 		width: 98%;
