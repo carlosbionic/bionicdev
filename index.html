@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155322362-1"></script>
 <script>
@@ -22,7 +24,7 @@
 
 
 <section id="headerPresentation">
-	<img id="coffee" src="images/coffee1.svg">
+	<!--<img id="coffee" src="images/coffee1.svg">-->
 	<p class="main-title">Hello! I'm Carlos</p>
 	<p class="main-subtitle">Physicist with passion about programming</p>
 		
@@ -35,10 +37,7 @@
 	<p>Here is a list of my projects. Some of them were made for clients all around the World. Other are personal projects made for me, or just to learn.</p>
 
 	<div class="portfolioItems">
-		<div class="square"><div class="portfolioSingleItem"><img class="myImages" src="images/portfolio/plotly1.jpg"></div></div>
-		<div class="square"><div class="portfolioSingleItem"><img class="myImages" src="images/portfolio/plotly2.jpg"></div></div>
-		<div class="square"><div class="portfolioSingleItem"><img class="myImages" src="images/portfolio/plotly3.jpg"></div></div>
-		<div class="square"><div class="portfolioSingleItem"><img class="myImages" src="images/portfolio/plotly4.jpg"></div></div>
+		<div class="square"><div class="portfolioSingleItem"><a href="portfolio/plotly/index.html" target="_blank"><img class="myImages" src="portfolio/plotly/plotly1.jpg"></a></div></div>
 		<div class="square"><div class="portfolioSingleItem"></div></div>
 		<div class="square"><div class="portfolioSingleItem"></div></div>
 		<div class="square"><div class="portfolioSingleItem"></div></div>
@@ -111,40 +110,6 @@
 
 </section>
 
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <!--<div id="caption"></div>-->
-  <img class="modal-content" id="img01">
-</div>
-
-<script>
-// create references to the modal...
-var modal = document.getElementById('myModal');
-// to all images -- note I'm using a class!
-var images = document.getElementsByClassName('myImages');
-// the image in the modal
-var modalImg = document.getElementById("img01");
-
-// Go through all of the images with our custom class
-for (var i = 0; i < images.length; i++) {
-  var img = images[i];
-  // and attach our click listener for this image.
-  img.onclick = function(evt) {
-    console.log(evt);
-
-
-    modal.style.display = "block";
-    modalImg.src = this.src;
-  }
-}
-
-// close the modal when clicked anywhere
-modal.onclick = function() {
-  modal.style.display = "none";
-}
-</script>
 
 </body>
 </html>
