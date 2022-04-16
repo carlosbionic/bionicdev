@@ -30,11 +30,12 @@ h2 {
 	letter-spacing: 2px;
 	color: #E7E8FF;
 	/*text-shadow: 0 0 0px #FFB7B7;*/
+	cursor: default;
 	transition: ease 0.2s;
 }
 
 h2:hover {
-	letter-spacing: 6px;
+	letter-spacing: 3.5px;
 	color: #BBFFB4;
 	transition: ease 0.2s;
 }
@@ -225,7 +226,6 @@ canvas {
 
 .rectBlog {
   position: relative;
-  border: 0px solid;
   box-sizing: border-box;
   box-shadow: 0 0 6px #fff;
   background-color: #1a1a1a;
@@ -240,7 +240,7 @@ canvas {
 
 .rectBlog::before {
   content: '';
-  display: block;
+  /*display: block;*/
   padding-top: 100%;
 }
 
@@ -283,6 +283,14 @@ canvas {
 
 	section {
 		width: 98%;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+
+	p {
+		font-size: 15px;
 	}
 }
 
@@ -337,14 +345,17 @@ textarea {
 
 
 .portfolioImg {
-	width: 60%;
-	margin: 20px auto;
+	/*width: 60%;*/
+	width: 600px;
+	display: block;
+	margin-top: 20px;
 	border: 2px solid #fff;
 	border-radius: 10px;
 }
 
 @media only screen and (max-width: 925px) {
 	.portfolioImg {
-		width: 90%;
+		width: 80%;
+		margin: 20px auto;
 	}
 }
