@@ -17,11 +17,12 @@ body {
   font-weight: bold;
   /*letter-spacing: 0.1em;*/
   color: #1C8B92;
+  /*text-shadow: 0 0 10px #fff;*/
 }
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
-  color: #000C81;
+  color: var(--link-color);
 }
 
 .usercircle {
@@ -115,6 +116,7 @@ img {
   --color-secondary: #F3F3F3;
   --color-accent: #fd6f53;
   --font-color: #000000;
+  --link-color: #000295;
 }
 
 .theme-dark {
@@ -122,6 +124,7 @@ img {
   --color-secondary: #2a2c2d;
   --color-accent: #12cdea;
   --font-color: #ffffff;
+  --link-color: #B7B8FF;
 }
 
 /* The switch - the box around the slider */
