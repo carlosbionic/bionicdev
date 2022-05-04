@@ -45,6 +45,10 @@ a:link, a:visited, a:hover, a:active {
 .meta {
 }
 
+.header *{
+  margin-top: 15px;
+}
+
 .category {
   text-transform: uppercase;
   font-weight: bold;
@@ -110,12 +114,12 @@ img {
   max-width: 100%;
 }
 
-ul {
+.article ul {
   list-style: none; /* Remove default bullets */
   color: var(--font-color);
 }
 
-ul li::before {
+.article ul li::before {
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #dd3311; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
@@ -149,6 +153,7 @@ ul li::before {
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin: 10px;
 }
 
 /* Hide default HTML checkbox */
