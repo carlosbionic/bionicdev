@@ -29,6 +29,8 @@ a:link, a:visited, a:hover, a:active {
   width: 20px;
   vertical-align: text-bottom;
   display: inline;
+  filter: invert(20%) sepia(97%) saturate(3566%) hue-rotate(17deg) brightness(98%) contrast(102%);
+
   /*height: 9px;*/
 }
 
@@ -70,7 +72,7 @@ a:link, a:visited, a:hover, a:active {
   vertical-align: baseline;
 }
 
-p {
+p, li {
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: 18px;
@@ -91,7 +93,7 @@ h3 {
   line-height: 1.2;
 }
 
-h1, h2, h3, p, span {
+h1, h2, h3, p, span, figcaption {
   color: var(--font-color);
   transition: ease 1s;
 }
@@ -115,7 +117,7 @@ ul {
 
 ul li::before {
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: red; /* Change the color */
+  color: #dd3311; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   font-size: 25px;
 
@@ -126,7 +128,7 @@ ul li::before {
 
 
 .theme-light {
-  --color-primary: #0060df;
+  --color-primary: #FF6767;
   --color-secondary: #F3F3F3;
   --color-accent: #fd6f53;
   --font-color: #000000;
@@ -134,7 +136,7 @@ ul li::before {
 }
 
 .theme-dark {
-  --color-primary: #17ed90;
+  --color-primary: #077600;
   --color-secondary: #2a2c2d;
   --color-accent: #12cdea;
   --font-color: #ffffff;
@@ -211,4 +213,12 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+.encloseEqn {
+  background: var(--color-primary);
+
+  padding: 10px;
+  border-radius: 10px;
 }

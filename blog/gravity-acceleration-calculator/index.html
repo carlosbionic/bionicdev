@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>  
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155322362-1"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5961266293258608"
+     crossorigin="anonymous"></script>
+     
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-155322362-1');
+</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../../css/blogstyle.css">
+
+  <link rel="shortcut icon" href="../../images/favicon.ico">
+
+	<title>Gravity Acceleration Calculator</title>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <style>
+
+    #gravityCalcTitle {
+      text-align: center;
+      color: #fff;
+      font-size: 30px;
+    }
+
+    #calculatorContainer {
+      border-radius: 10px;
+      background: #1841FA;
+      padding: 10px;
+    }
+
+    /* apply color white to all p inside the calculator container */
+    .calculatorContainer p {
+      color: #fff;
+    }
+
+    #results {
+      display: inline;
+    }
+
+    #choosePlanet {
+     position: relative;
+    }
+
+    .crossed:after {
+      position: absolute;
+      left: 20%;
+      top: 50%;
+      height: 3px;
+      background: #c00;
+      content: "";
+      width: 50%;
+      display: block;      
+    }
+
+    .calcRow {
+      display: flex; 
+      border: 0px solid blue;
+      width: 100%;
+    }
+
+    .leftElem {
+      
+      width: 40%;
+      float: left;
+      border: 0px solid #fff;
+    }
+
+    .leftElem > p {
+      float: right;
+      margin-right: 10px;
+    }
+
+    .rightElem {
+      align-self: center;
+      width: 60%;
+      float: right;
+      border: 0px solid red;
+    }
+
+    select, input {
+      font-size: 18px;
+    }
+
+    input {
+      width: 150px;
+    }
+
+    .finalResult {
+      background: #ED0404;
+    }
+
+   
+  </style>
+
+</head>
+<body>
+
+<label id="switch" class="switch">
+  <input type="checkbox" onchange="toggleTheme()" id="slider">
+  <span class="slider round"></span>
+</label>  
+
+<article class="article">
+  <header class="header">
+    <div class="category">Physics</div><div class="category">Gravity</div>
+    <h1>
+      Gravity Acceleration Calculator
+    </h1>
+    <div class="meta">      
+      <span class="pub-date">Posted on May. 4, 2022</span><br>
+      <p class="author"><img class="usercircle" src="../../images/usercircle.svg"> By <a href="https://github.com/carlosbionic" target="_blank">Carlos</a></p>
+    </div>
+  </header>
+
+  <p>
+    We all heard at least once or twice the word <b>gravity</b>. But what is gravity? In this article I am going to talk about the <i>acceleration</i> of gravity near the surface of Earth (or any other celestial body).
+  </p>
+
+  <p>
+    Pick up some random object (a tennis ball can be a good example; please don't do this with your cell phone...). Lift it above the floor about 1.5 or 2 meters. Drop it. What happened? The tennis ball started to fall <i>increasing the velocity over time</i>. When velocity changes over time we say there is an <b>acceleration</b>. In this case, the acceleration is present because there is a force, which is called the <b>force of gravity</b>.
+  </p>
+
+  <p>
+    This force of gravity is the one that, for example, keeps the Moon orbiting around the Earth, and the Earth orbiting around the Sun.
+  </p>
+
+  <figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Moon_Earth_Comparison.png" alt="Earth Moon System">
+    <figcaption><strong>Figure 1.</strong> Earth Moon System</figcaption>
+  </figure>
+
+  <p>
+    In this article we are going to concentrate on an object near the surface of a big celestial body like the Earth, and compute the acceleration when the object falls, namely the <i>acceleration of gravity</i> (sometimes called just <i>gravity</i>).
+  </p>
+
+  <h2>Gravity acceleration</h2>
+
+  <p>
+    Let's begin with Newton's second law of dynamics:
+  </p>
+
+  <p>
+  \[ F = m\cdot a \]
+  </p>
+
+  <p>
+    Force equals mass times acceleration. By <i>Force</i> I mean the sum of all the forces acting on the body of mass <i>m</i>. <a href="#Fig2">Figure 2</a> shows the system corresponding to a celestial body of mass <b>M</b> and a small body of mass <b>m</b>. The mass <b>m</b> for our example would be the small tennis ball.
+  </p>
+
+  <figure id="Fig2">
+    <img src="gravity1.svg" alt="two object gravity">
+    <figcaption><strong>Figure 2.</strong> Conventions used in this article.</figcaption>
+  </figure>    
+
+  <p>
+    In this case there will be a unique force acting between the two bodies, namely the <b>gravitational force</b>. We know that this force strongly depends on the distance between the center of mass of both bodies. This distance can be expressed as the sum of the radius <i>R</i> of the big celestial body, and the height <i>h</i> of the small body measured from the surface. We are assuming that the small body's dimensions are insignificant with respect to the big body.
+  </p>
+
+  <p>
+    The gravitational force between the bodies of mass <b>M</b> and <b>m</b> separated by a distance <b>r</b> can be expressed as:
+  </p>
+
+  <p>
+  \[ F_G = G\cdot\frac{m\cdot M}{r^2} \]
+  </p>
+
+  <p>
+    In this equation, <b>G</b> is a constant, <b>m</b> and <b>M</b> the masses and <b>r</b> the distance between the two bodies. <b>G</b> is called <i>Gravitational constant</i> <a id="citeRef1" href="#citeNote1">[1]</a>. It has a value of 6.67428e-11 m<sup>3</sup>kg<sup>-1</sup>s<sup>-2</sup>. 
+  </p>
+
+  <p>
+      Replacing Newton's second law for the left hand side (let's call <b>g</b> the acceleration, since we are talking about the acceleration of gravity):
+  </p>
+
+  <p>
+  \[ m\cdot g = G\cdot\frac{m\cdot M}{r^2} \]
+
+  \[ g = \frac{G\cdot M}{r^2} \]
+  </p>   
+
+  <p>
+    In the last step, the mass <b>m</b> cancels out. This is the proof that <i>any two bodies fall with the same acceleration near the surface of the Earth, independently of the masses</i>. This is true only if we neglect the air drag. If you compare a tennis ball and a piece of paper falling to the ground, they will likely fall with very different accelerations because the air drag is bigger for the paper.
+  </p>
+
+  <p>
+    Lastly, we can express the distance <b>r</b> as the sum of <b>R</b> and <b>h</b> (see <a href="#Fig2">Figure 2</a>), and the expression for the gravity is:
+  </p>
+
+
+  <p class="encloseEqn">
+    \[ g = \frac{G\cdot M}{(R+h)^2} \]
+  </p> 
+
+  <p>
+    This is the equation used in the <a href="#calculatorContainer"><b>Gravity calculator</b></a> below. As we can see, the value of the gravity depends on the <i>height</i>, which is measured from the planet's surface (celestial body). The value of the gravity decreases as the height increases.
+  </p>
+
+  <p>
+    Here is a summary of what each parameter means:
+  </p>
+
+  <ul>
+    <li>g: the acceleration due to gravity (m/s<sup>2</sup>)</li>
+    <li>G: gravity constant. In this article we will use a value of 6.67428e-11 m<sup>3</sup>kg<sup>-1</sup>s<sup>-2</sup></li>
+    <li>M: mass of the celestial body (Kg)</li>
+    <li>R: radius of the celestial body (Km)</li>
+    <li>h: height (m, Km). This is the distance from the planet's surface to the point where the gravity is to be computed.</li>
+  </ul>
+
+  <h2>The Gravity Calculator</h2>
+
+  <p>
+    In this section you can find the <b>gravity calculator</b>. The idea is to compute the value of the acceleration of gravity given a set of parameters.
+  </p>
+  
+  <div id="calculatorContainer">
+
+      <h4 id="gravityCalcTitle">Gravity calculator</h4>
+
+      <div id="choosePlanet" class="calcRow">
+        <div class="leftElem">
+          <p>Choose planet</p>
+        </div>
+        <div class="rightElem">
+          <select id="planet" onChange="computeG()">
+            <option value="sun">Sun</option>
+            <option value="mercury">Mercury</option>
+            <option value="venus">Venus</option>
+            <option value="earth">Earth</option>
+            <option value="mars">Mars</option>
+            <option value="jupiter">Jupiter</option>
+            <option value="saturn">Saturn</option>
+            <option value="uranus">Uranus</option>
+            <option value="neptune">Neptune</option>
+            <option value="moon">Moon</option>
+            <option value="enceladus">Enceladus</option>
+            
+          </select>
+        </div>
+      </div>
+
+      <div class="calcRow">
+        <div class="leftElem"></div>
+        <div class="rightElem"><p id="planetMass"></p></div>
+      </div>
+
+      <div class="calcRow">
+        <div class="leftElem">
+          <p>Custom Mass</p>
+        </div>
+        <div class="rightElem">
+          <input id="mass" type="number" name="mass" min=0 placeholder="a number..." onChange="computeG()">
+          <select id="massUnit" onChange="computeG()">
+            <option value="Kg">Kg</option>
+            <option value="g">g</option>
+            <option value="t">t</option>
+          </select>   
+        </div>     
+      </div>
+
+      <div class="calcRow">
+        <div class="leftElem">
+          <p>Custom Radius</p>
+        </div>
+        <div class="rightElem">
+          <input id="radius" type="number" name="radius" min=0 placeholder="a number..." onChange="computeG()">
+          <select id="radiusUnit" onChange="computeG()">
+            <option value="Km">Km</option>
+            <option value="m">m</option>
+            <option value="in">in</option>
+          </select>   
+        </div>     
+      </div>      
+
+      <div class="calcRow">
+        <div class="leftElem">
+          <p>Height</p>
+        </div>
+        <div class="rightElem">
+          <input id="height" type="number" name="height" min=0 placeholder="a number..." onChange="computeG()">
+          <select id="heightUnit" onChange="computeG()">
+            <option value="m">m</option>
+            <option value="Km">Km</option>
+            <option value="in">in</option>
+            <option value="ft">ft</option>
+          </select>
+        </div>
+      </div>      
+
+      <!--<button onclick="computeG()">Compute g !</button>-->
+
+      <div class="calcRow finalResult">
+        <div class="leftElem">
+          <p>The value of the gravity is:</p>
+        </div>
+        <div class="rightElem">
+          <p id="results"></p>
+          <select id="gUnit" onChange="computeG()">
+            <option value="m/s2">m/s&sup2;</option>
+            <option value="cm/s2">cm/s&sup2;</option>
+            <option value="Km/s2">Km/s&sup2;</option>
+            <option value="in/s2">in/s&sup2;</option>
+            <option value="ft/s2">ft/s&sup2;</option>
+          </select>     
+        </div>   
+      </div>
+
+  </div>
+
+  <p>
+    For the mass <b>M</b> and radius <b>R</b> of the celestial body you can choose a predefined planet (Earth, Mars, etc) or a natural satellite (Moon, Enceladus, etc). When you choose one from the dropdown, a message will appear below with the value of the mass in Kg, expressed in scientific notation, and the radius in Km <a id="citeRef2" href="#citeNote2">[2]</a>.
+  </p>
+
+  <p>
+    Another possibility is for you to choose a custom mass and radius for the celestial body. In this case you can also choose a unit different from Kg and Km.
+  </p>
+
+  <p>
+    Lastly, you can set a height for the object (the <b>h</b> parameter) with a custom unit (m, Km, etc). If you don't set a value in this input, the default value is set to zero.
+  </p>
+
+  <p>
+    At the bottom you can see the calculated value of the acceleration of gravity. You can choose different units for the result.
+  </p>
+      
+
+  <h2>Sources</h2>
+  <hr>
+  <p>
+    <a id="citeNote1" href="#citeRef1">[1]</a> <a href="https://en.wikipedia.org/wiki/Gravitational_constant" target="_blank">Universal Gravitational Constant</a>, Wikipedia
+  </p>
+    
+  <p>
+    <a id="citeNote2" href="#citeRef2">[2]</a> <a href="https://en.wikipedia.org/wiki/List_of_Solar_System_objects_by_size" target="_blank">List of Solar System objects by size</a>, Wikipedia
+  </p>
+
+
+</article>	
+
+<script>
+  function computeG() {
+    var planet = document.getElementById("planet").value;
+
+    var planetMass = document.getElementById("mass").value;
+    var planetMassUnit = document.getElementById("massUnit").value;
+
+    var planetRadius = document.getElementById("radius").value;
+    var planetRadiusUnit = document.getElementById("radiusUnit").value;
+
+    var height = document.getElementById("height").value;
+    var heightUnit = document.getElementById("heightUnit").value;
+
+    // if height field is empty, make it have a zero value.
+    if (height == '') {
+      height = 0.0;
+    }
+
+    if (heightUnit == 'Km') {
+      height *= 1000;
+    } else if (heightUnit == 'in') {
+      height *= 0.0254;
+    } else if (heightUnit == 'ft') {
+      height *= 0.3048;
+    }
+
+    if (planetMassUnit == 'g') {
+      planetMass /= 1000;
+    } else if (planetMassUnit == 't') {
+      planetMass *= 1000;
+    }  
+
+    if (planetRadiusUnit == 'm') {
+      planetRadius /= 1000;
+    } else if (planetRadiusUnit == 'in') {
+      planetRadius *= 2.54e-5;
+    }      
+
+
+    var outDiv = document.getElementById("results");
+
+    const G = 6.67428e-11; //m^3 kg^-1 s^-2
+
+    // Mass (Kg) and radius (Km) of each object
+    var MR = {
+      'earth': [5.9724e24, 6371.00084],
+      'moon': [7.34767309e22, 1737.5],
+      'jupiter': [1.898187e27, 69911.0],
+      'sun': [1989100000e21, 695508.0],
+      'saturn': [568317e21, 58232.0],
+      'uranus': [86813e21, 25362.0],
+      'neptune': [102413e21, 24622.0],
+      'venus': [4867.5e21, 6052.0],
+      'mars': [641.71e21, 3389.5],
+      'mercury': [300.11e21, 2439.4],
+      'pluto': [13.03e21, 1188.3],      
+      'enceladus': [0.1080e21, 252.1]
+    };
+ 
+
+    if (planetMass != '' || planetRadius != '') {
+      mass = parseFloat(planetMass);
+      radius = parseFloat(planetRadius);
+      document.getElementById("choosePlanet").classList.add('crossed'); 
+
+      document.getElementById("planetMass").innerHTML = 'To choose a predefined celestial body,<br>clear both the custom mass and radius inputs...';
+    } else {
+      mass = MR[planet][0];
+      radius = MR[planet][1];
+      document.getElementById("choosePlanet").classList.remove('crossed'); 
+      
+      document.getElementById("planetMass").innerHTML = planet[0].toUpperCase() + planet.slice(1) + "'s mass: " + mass + ' Kg<br>' + planet[0].toUpperCase() + planet.slice(1) + "'s radius: " + radius + ' Km'; 
+    }
+
+
+
+    var g = G*mass/Math.pow(parseFloat(height) + 1000.0*radius, 2);
+
+    var gravityUnit = document.getElementById("gUnit").value;
+    if (gravityUnit == 'cm/s2') {
+      g *= 100;
+    } else if (gravityUnit == 'Km/s2') {
+      g /= 1000;
+    } else if (gravityUnit == 'in/s2') {
+      g *= 39.3701;
+    } else if (gravityUnit == 'ft/s2') {
+      g *= 3.28084;
+    }
+    outDiv.innerHTML = g.toFixed(6);   
+  }
+
+</script>
+<script>computeG();</script>
+
+<script type="text/javascript" src="../../js/setTheme.js"></script>
+</body>
+</html>
