@@ -16,6 +16,13 @@
   gtag('config', 'UA-155322362-1');
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+  $("#footer-repeat").load("footer/footer.html");
+});
+</script> 
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../css/blogstyle.css">
@@ -447,5 +454,7 @@
 <script>computeG();</script>
 
 <script type="text/javascript" src="../../js/setTheme.js"></script>
+
+<div id="footer-repeat"></div>
 </body>
 </html>
