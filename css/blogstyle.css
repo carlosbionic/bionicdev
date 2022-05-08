@@ -153,7 +153,7 @@ img {
   display: inline-block;
   width: 60px;
   height: 34px;
-  margin: 10px;
+  margin: 80px auto 30px 30px;
 }
 
 /* Hide default HTML checkbox */

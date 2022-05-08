@@ -13,6 +13,20 @@
 
   gtag('config', 'UA-155322362-1');
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(function() {
+  $("#footer-repeat").load("../../footer.html");
+});
+</script> 
+
+<script>
+$(function() {
+  $("#navbar-repeat").load("../../navbar.html");
+});
+</script> 
 	
 	<title>Carlos | Python scripts</title>
 	<link rel="shortcut icon" href="../../images/favicon.ico">
@@ -22,6 +36,7 @@
 </head>
 <body>
 
+<div id="navbar-repeat"></div> 
 
 <section>
 	<h2>Python geometric scripts</h2>
@@ -34,16 +49,21 @@
 
 <section id="contact">
 	<h2>Contact Me</h2>
-	<p>You can contact me if you fill in the form</p>
+	<p>If you want to work with me, you can contact me by mail. Let me know how I can help you. Thank you!</p>
 
+	<p><b>carlosaprado@gmail.com</b></p>
+
+<!--
 <form>      
   <input name="name" type="text" class="feedback-input" placeholder="Name" />   
   <input name="email" type="text" class="feedback-input" placeholder="Email" />
   <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
   <input type="submit" value="SUBMIT"/>
 </form>
-
+-->
 </section>
+
+<div id="footer-repeat"></div>
 
 
 

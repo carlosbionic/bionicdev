@@ -17,16 +17,22 @@
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script>
 $(function() {
-  $("#footer-repeat").load("../../footer/footer.html");
+  $("#footer-repeat").load("../../footer.html");
+});
+</script> 
+
+<script>
+$(function() {
+  $("#navbar-repeat").load("../../navbar.html");
 });
 </script> 
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../css/blogstyle.css">
-  <link rel="stylesheet" href="../../footer/footerstyle.css">
 
   <link rel="shortcut icon" href="../../images/favicon.ico">
 
@@ -39,6 +45,8 @@ $(function() {
 
 </head>
 <body>
+
+<div id="navbar-repeat"></div>  
 
 <label id="switch" class="switch">
   <input type="checkbox" onchange="toggleTheme()" id="slider">
