@@ -227,3 +227,15 @@ input:checked + .slider:before {
   padding: 10px;
   border-radius: 10px;
 }
+
+
+pre {
+  background-color: #1E1E1E;
+  color: white;
+  margin: 0;
+}
+
+code {
+  display: block;
+  padding: 0em;  
+}
