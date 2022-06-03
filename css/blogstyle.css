@@ -227,6 +227,7 @@ pre {
 code {
   display: block;
   padding: 0em;  
+  overflow-x: scroll;
 }
 
 .codeInline {
@@ -253,4 +254,14 @@ code {
   --font-color: #ffffff;
   --link-color: #B7B8FF;
   --codeInlineColor: #4F4F4F;
+}
+
+
+@media only screen and (max-width: 925px) {
+
+  code {
+    font-size: 13px;
+  }
+
+
 }
