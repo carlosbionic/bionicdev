@@ -227,7 +227,7 @@ pre {
 code {
   display: block;
   padding: 0em;  
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .codeInline {
