@@ -43,6 +43,24 @@ $(function() {
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>  
 
+<!-- Primary Meta Tags -->
+<meta name="title" content="Javascript | Hello World">
+<meta name="description" content="Write your first Javascript hello world with the alert function!">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://deusdev.tech/blog/javascript-hello-world">
+<meta property="og:title" content="Javascript Hello World">
+<meta property="og:description" content="Write your first Javascript hello world with the alert function!">
+<meta property="og:image" content="http://deusdev.tech/blog/javascript-hello-world/helloJs1.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="http://deusdev.tech/blog/javascript-hello-world">
+<meta property="twitter:title" content="Javascript Hello World">
+<meta property="twitter:description" content="Write your first Javascript hello world with the alert function!">
+<meta property="twitter:image" content="http://deusdev.tech/blog/javascript-hello-world/helloJs1.png">  
+
 </head>
 <body>
 
@@ -60,13 +78,13 @@ $(function() {
       Getting started with Javascript: <br>a Hello World program.
     </h1>
     <div class="meta">      
-      <span class="pub-date">Posted on May 27, 2022</span><br>
-      <p class="author"><img class="usercircle" src="../../images/usercircle.svg"> By <a href="https://github.com/carlosbionic" target="_blank">Carlos</a></p>
+      <span class="pub-date">Posted on June 3, 2022</span><br>
+      <p class="author"><img class="usercircle" src="../../images/usercircle.svg"> By <a href="https://twitter.com/deusdevok" target="_blank">Carlos</a></p>
     </div>
 
     <!-- TWITTER SHARE -->
     <a 
-      href="https://twitter.com/intent/tweet?text=I just published an article on how you can write your first Javascript program!" 
+      href="https://twitter.com/intent/tweet?text=With this blog post you can write your first Javascript program!" 
       class="twitter-share-button" 
       data-size="large" 
       data-via="deusdevok" 
@@ -74,43 +92,172 @@ $(function() {
     </a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-    <!-- FACEBOOK SHARE -->
-    <!--
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v13.0" nonce="BuGZgKUb"></script>
-    <div class="fb-share-button" data-href="http://deusdev.tech/blog/is-physics-an-exact-science/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdeusdev.tech%2Fblog%2Fis-physics-an-exact-science%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>    
-    -->
-    <!-- LINKEDIN SHARE -->
-    <!--
-    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-    <script type="IN/Share" data-url="https://www.linkedin.com"></script>
-    -->
-
   </header>
 
   <p>
-    First things first: by the time of writing this post, I am still learning about Javascript. I'm not an expert (yet), and the things you are about to read may not be technically correct. 
+    First things first: by the time of writing this post, I am still learning about Javascript. I'm not an expert (yet), and the things you are about to read may not be 100% technically correct. 
   </p>
 
   <p>
-    However, the goal of this post is for you to have an initial idea of what you can do with Javascript, and make your very first program without much effort!
+    <b>However</b>, the goal of this post is for you to have an initial idea of what you can do with Javascript, and make your very first program without much effort!
   </p>
 
   <h2>Prerequisites</h2>
   <p>
-    Before continuing with this reading, you need to have a very basic knowledge of HTML and maybe some CSS. This is because Javascript will be embeded in an HTML page (and it can have CSS stylings).
+    Before continuing with this reading, you need to have a very basic knowledge of HTML and maybe some CSS. This is because Javascript will be embeded in an HTML page, which can also have CSS stylings.
+  </p>
+
+  <p>
+    If you haven't learn anything about HTML and CSS or you don't know what I'm talking about, I recommend you start at least the very basics. Here is a short list with resources you can start learning from.
+  </p>
+
+  <ul>
+    <h4>HTML</h4>
+    <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools</a></li>
+
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML MDN web docs (mozilla)</a></li>
+
+    <h4>CSS</h4>
+    <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a></li>
+
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS MDN web docs (mozilla)</a></li>
+
+    <h4>HTML and CSS</h4>
+
+    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+
+    <li><a href="https://www.htmlandcssbook.com/" target="_blank">HTML and CSS from Jon Duckett</a></li>
+  </ul>
+
+  <p>
+    There are a lot of free and paid resources all over the internet to learn HTML and CSS. These are not hard to learn compared to Javascript, but everything takes time to sink in (at least in my case).
+  </p>
+
+  <h2>Preparing the code</h2>
+
+  <p>
+    Let's start setting up the initial code we will use, which is going to be a very basic HTML website. All we need for now is the <code class="codeInline">html</code> and <code class="codeInline">body</code> tags. Let's add an <code class="codeInline">h1</code> header with some text so it doesn't feel too empty.
+  </p>
+
+  <p>
+    Create a new text file called <b>index.html</b>, and copy the following code.
+  </p>
+
+  <pre><code>
+    &lt;html&gt;
+      &lt;body&gt;
+        &lt;h1&gt;My first Javascript !&lt;/h1&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;   
+  </code></pre>  
+
+  <p>
+    After saving this HTML code in the <b>index.html</b> file, open it with a web browser like Chrome. You should see a white page with the text you set up in the <code class="codeInline">h1</code> tag in the upper left corner of the screen (see <a href="#Fig1">Figure 1</a>).
+  </p>
+
+  <figure id="Fig1">
+    <img src="helloJs1.png" alt="My first Javascript !" style="border: 1px solid #AFAFAF;">
+    <figcaption><strong>Figure 1.</strong> <em>My first Javascript</em> text as an h1 tag</figcaption>
+  </figure>  
+
+  <p>
+    Everything we did is supposed to be well known to you by now. Next we can start jumping into our first <b>Javascript</b> code.
+  </p>
+
+  <h2>Writing Javascript</h2>
+
+  <p>
+    To write Javascript code into our HTML file we need to use the <code class="codeInline">script</code> tag (script tags has to be closed). The actual code will be present between the opening and closing <code class="codeInline">script</code> tags.
+  </p>
+
+  <p>
+    Now, where should we include the Javascript code? Is it in the <b>body</b>, or we need to write it in a separate file and then load it? We can do it both ways. Actually we can also put it in the <b>head</b> of the document and it will still work (I haven't included a <b>head</b> in this example to make it more simplified by the way).
+  </p>
+
+  <p>
+    I won't get into those details in this article. I will use the <b>body</b> to place the code for now. Let's start writing the opening and closing <code class="codeInline">script</code> tags below the title (<code class="codeInline">h1</code> tag).
   </p>
   
   <pre><code>
-    &lt;!DOCTYPE html&gt;
     &lt;html&gt;
-    &lt;body&gt;
-      &lt;script&gt;
-        alert('Hello, World!');
-      &lt;/script&gt;  
-    &lt;/body&gt;
+      &lt;body&gt;
+        &lt;h1&gt;My first Javascript !&lt;/h1&gt;
+        &lt;script&gt;
+        &lt;/script&gt;  
+      &lt;/body&gt;
     &lt;/html&gt;   
   </code></pre>
+
+  <p>
+    Finally we just need to write the actual code inside the <code class="codeInline">script</code> tags. The idea is to write a <em>hello world</em> program, something that prints the text somewhere using Javascript.
+  </p>
+
+  <p>
+    In this article I will use the <code class="codeInline">alert</code> function <a id="citeRef1" href="#citeNote1">[1]</a>. When calling this function with a string as parameter, a pop up dialog box will appear on the screen showing the corresponding message.
+  </p>
+
+  <p>
+    Write <code class="codeInline">alert('Hello, World!');</code> between the opening and closing <code class="codeInline">script</code> tags.
+  </p>
+
+  <pre><code>
+    &lt;html&gt;
+      &lt;body&gt;
+        &lt;h1&gt;My first Javascript !&lt;/h1&gt;
+        &lt;script&gt;
+          alert('Hello, World!');
+        &lt;/script&gt;  
+      &lt;/body&gt;
+    &lt;/html&gt;   
+  </code></pre>  
+
+  <p>
+    The text between the parentheses after the <code class="codeInline">alert</code> function has to be enclosed between quotes. This is called a <em>string</em> (strings will be covered in another article).
+  </p>
+
+  <p>
+    Save the edited code, and refresh the browser window to see the effect. You should see something similar to the <a href="#Fig2">Figure 2</a>.
+  </p>
+
+  <figure id="Fig2">
+    <img src="helloJs2.png" alt="Javascript hello world" style="border: 1px solid #AFAFAF;">
+    <figcaption><strong>Figure 2.</strong> Hello world text in a pop up window, after using the <code class="codeInline">alert</code> function.</figcaption>
+  </figure>   
+
+  <p>
+    This window can be closed after clicking the <b>OK</b> button. If you refresh the page, you will see the same pop up window with the message again.
+  </p>
+
+  <p>
+    This means the Javascript code is executed each time the page is loaded.
+  </p>
+
+  <h2>Homework for you</h2>
+
+  <ul>
+    <li>The very first thing you can try to do is this: after you finish reading this paragraph, minimize this window (don't close it! :)) and open a new text editor. Write the code needed to make your Javascript Hello World just like this article explained. Once you had it working, come back for more.</li>
+
+    <li>You can try changing the message to something different. Try printing a very long message to see the effect on the size of the containing box.</li>
+
+    <li>Another thing you can try is to print a second message after the first one to see what happens. You can do this by calling <code class="codeInline">alert</code> on another string. Will two pop up windows appear at the same time? Will the first one appear first, and after clicking <b>OK</b> the second will appear? Give it a try!</li>
+  </ul>
+
+
+  <h2>Summary</h2>
+  <p>
+    This was a first approach to Javascript. There are many details which are not covered in this article (like where to include the <code class="codeInline">script</code> tags). I left those for future blog posts about Javascript.
+  </p>
+
+  <p>
+    I hope you find it interesting and useful. See you in another blog post!
+  </p>
+
+  <h2>Sources</h2>
+  <hr>
+  <p>
+    <a id="citeNote1" href="#citeRef1">[1]</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Window/alert</a>
+  </p>
+
 
 </article>	
 

@@ -49,6 +49,9 @@ a:link, a:visited, a:hover, a:active {
   margin-top: 15px;
 }
 
+.header {
+}
+
 .category {
   text-transform: uppercase;
   font-weight: bold;
@@ -131,21 +134,7 @@ img {
 }
 
 
-.theme-light {
-  --color-primary: #FF6767;
-  --color-secondary: #F3F3F3;
-  --color-accent: #fd6f53;
-  --font-color: #000000;
-  --link-color: #000295;
-}
 
-.theme-dark {
-  --color-primary: #077600;
-  --color-secondary: #2a2c2d;
-  --color-accent: #12cdea;
-  --font-color: #ffffff;
-  --link-color: #B7B8FF;
-}
 
 /* The switch - the box around the slider */
 .switch {
@@ -238,4 +227,30 @@ pre {
 code {
   display: block;
   padding: 0em;  
+}
+
+.codeInline {
+  display: inline;
+  background: var(--codeInlineColor);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+
+.theme-light {
+  --color-primary: #FF6767;
+  --color-secondary: #F3F3F3;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+  --link-color: #000295;
+  --codeInlineColor: #CFCFCF;
+}
+
+.theme-dark {
+  --color-primary: #077600;
+  --color-secondary: #2a2c2d;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+  --link-color: #B7B8FF;
+  --codeInlineColor: #4F4F4F;
 }
