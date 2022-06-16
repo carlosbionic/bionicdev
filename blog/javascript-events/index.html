@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>  
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155322362-1"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5961266293258608"
+     crossorigin="anonymous"></script>
+     
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-155322362-1');
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(function() {
+  $("#footer-repeat").load("../../footer.html");
+});
+</script> 
+
+<script>
+$(function() {
+  $("#navbar-repeat").load("../../navbar.html");
+});
+</script> 
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../../css/blogstyle.css">
+
+  <link rel="shortcut icon" href="../../images/favicon.ico">
+
+	<title>Javascript | Events</title>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>  
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="Javascript | Events">
+<meta name="description" content="An introduction to Javascript Events!">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://deusdev.tech/blog/javascript-events">
+<meta property="og:title" content="Javascript Events">
+<meta property="og:description" content="An introduction to Javascript Events">
+<meta property="og:image" content="http://deusdev.tech/blog/javascript-hello-world/helloJs1.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="http://deusdev.tech/blog/javascript-hello-world">
+<meta property="twitter:title" content="Javascript Events">
+<meta property="twitter:description" content="An introduction to Javascript Events">
+<meta property="twitter:image" content="http://deusdev.tech/blog/javascript-hello-world/helloJs1.png">  
+
+</head>
+<body>
+
+<div id="navbar-repeat"></div>  
+
+<label id="switch" class="switch">
+  <input type="checkbox" onchange="toggleTheme()" id="slider">
+  <span class="slider round"></span>
+</label>  
+
+<article class="article">
+  <header class="header">
+    <div class="category">Javascript</div><div class="category">Events</div>
+    <h1>
+      Javascript events: <br>an introduction.
+    </h1>
+    <div class="meta">      
+      <span class="pub-date">Posted on June 14, 2022</span><br>
+      <p class="author"><img class="usercircle" src="../../images/usercircle.svg"> By <a href="https://twitter.com/deusdevok" target="_blank">Carlos</a></p>
+    </div>
+
+    <!-- TWITTER SHARE -->
+    <a 
+      href="https://twitter.com/intent/tweet?text=Javascript events: an introduction" 
+      class="twitter-share-button" 
+      data-size="large" 
+      data-via="deusdevok" 
+      data-show-count="false">Tweet
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  </header>
+
+  <p>
+    An introduction here.
+  </p>
+
+  <h2>Prerequisites</h2>
+  <p>
+    Before continuing with this reading, you need to have a very basic knowledge of HTML and maybe some CSS. This is because Javascript will be embeded in an HTML page, which can also have CSS stylings.
+  </p>
+
+  <p>
+    If you haven't learn anything about HTML and CSS or you don't know what I'm talking about, I recommend you start at least the very basics. Here is a short list with resources you can start learning from.
+  </p>
+
+  <ul>
+    <h4>HTML</h4>
+    <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools</a></li>
+
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML MDN web docs (mozilla)</a></li>
+
+    <h4>CSS</h4>
+    <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a></li>
+
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS MDN web docs (mozilla)</a></li>
+
+    <h4>HTML and CSS</h4>
+
+    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+
+    <li><a href="https://www.htmlandcssbook.com/" target="_blank">HTML and CSS from Jon Duckett</a></li>
+  </ul>
+
+  <p>
+    There are a lot of free and paid resources all over the internet to learn HTML and CSS. These are not hard to learn compared to Javascript, but everything takes time to sink in (at least in my case).
+  </p>
+
+  <h2>Examples</h2>
+
+  <pre><code>
+    &lt;html&gt;
+      &lt;body&gt;
+        &lt;h1&gt;My first Javascript !&lt;/h1&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;   
+  </code></pre>  
+
+  <button>Change color</button>
+  <script>
+    const btn = document.querySelector('button');
+
+    function random(number) {
+      return Math.floor(Math.random() * (number+1));
+    }
+
+    btn.addEventListener('click', () => {
+      const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      //document.body.style.backgroundColor = rndCol;
+      btn.style.backgroundColor = rndCol;
+    });    
+  </script>
+
+  <h2>Sources</h2>
+  <hr>
+  <p>
+    <a id="citeNote1" href="#citeRef1">[1]</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Window/alert</a>
+  </p>
+
+
+</article>	
+
+<script type="text/javascript" src="../../js/setTheme.js"></script>
+
+<div id="footer-repeat"></div>
+</body>
+</html>

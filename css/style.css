@@ -46,7 +46,7 @@ p {
 
 canvas {
 	display: block;
-	vertical-align: bottom;
+	/*vertical-align: bottom;*/
 }
 
 #particles-js {
@@ -55,7 +55,7 @@ canvas {
     left: 0;
     width:100%;
     height:100%;
-    background: #00356B;
+    background: #000000;
 }
 
 #headerPresentation {
@@ -80,37 +80,40 @@ canvas {
 
 
 
+.title {
+	font-weight: bold;
+	left: 0;
+	right: 0;
+	top: 150px;
+	text-align: center;
+	position: absolute;
+	/*display: inline-block;*/
+	border: 0px solid red;
+}
+
 .main-title {
 	font-size: 80px;
-	font-weight: bold;
-	/*width: 500px;*/
-	left: 40px;
-	top: 150px;
-	position: absolute;
-	display: inline-block;
 }
 
-.main-subtitle {
+.main-subtitle1 {
+	font-size: 30px;
+	top: 350px
+}
+
+.main-subtitle2 {
+	font-size: 30px;
+	top: 400px
+}
+
+.main-subtitle3 {
 	font-size: 25px;
-	/*width: 400px;*/
-	left: 50px;
-	top: 350px;
-	position: absolute;
-	display: inline-block;
-	
+	top: 450px
 }
 
-#coffee {
-	height: 50%;
-	right: 0;
-	top: 0;
-	position: absolute;
-	border: 0px solid blue;
-}
 
-#portfolio {
-	/*width: 80%;*/
-}
+/*#portfolio {
+	width: 80%;
+}*/
 
 .portfolioItems {
 	display: grid;
