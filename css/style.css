@@ -32,6 +32,8 @@ h2 {
 	/*text-shadow: 0 0 0px #FFB7B7;*/
 	cursor: default;
 	transition: ease 0.2s;
+	padding-top: 20px;
+	border: 0px solid red;
 }
 
 h2:hover {
@@ -254,6 +256,7 @@ canvas {
   background-position: center;
   height: 50%;
   width: 100%;
+  background-size: 100%;
 }
 
 .card-bottom {

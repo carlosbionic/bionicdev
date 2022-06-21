@@ -64,7 +64,7 @@ body{
   display: none;
 }
 
-@media (max-width:800px) {
+@media only screen and (max-width:800px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -101,9 +101,11 @@ body{
     display: block;
     width: 100%;
   }
+  
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
   }
+
   .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
@@ -129,12 +131,18 @@ body{
   </div>
   
   <div class="nav-links">
-    <a href="/#aboutme">About</a>
-    <a href="/#portfolio">Work</a>
-    <a href="/#blog">Blog</a>
-    <a href="/#contact">Contact</a>
+    <a href="/#aboutme" onclick="applyCSS();">About</a>
+    <a href="/#portfolio" onclick="applyCSS();">Work</a>
+    <a href="/#blog" onclick="applyCSS();">Blog</a>
+    <a href="/#contact" onclick="applyCSS();">Contact</a>
   </div>
 </div>
+
+<script>
+  function applyCSS(){
+    document.getElementById("nav-check").checked = false;
+  };  
+</script>
 
 </body>
 </html>
