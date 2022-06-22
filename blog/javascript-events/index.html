@@ -61,6 +61,17 @@ $(function() {
 <meta property="twitter:description" content="An introduction to Javascript Events">
 <meta property="twitter:image" content="http://deusdev.tech/blog/javascript-hello-world/helloJs1.png">  
 
+<style>
+  .jsEventButton {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 8px;
+  }
+</style>
+
 </head>
 <body>
 
@@ -78,7 +89,7 @@ $(function() {
       Javascript events: <br>an introduction.
     </h1>
     <div class="meta">      
-      <span class="pub-date">Posted on June 14, 2022</span><br>
+      <span class="pub-date">Posted on June 22, 2022</span><br>
       <p class="author"><img class="usercircle" src="../../images/usercircle.svg"> By <a href="https://twitter.com/deusdevok" target="_blank">Carlos</a></p>
     </div>
 
@@ -95,69 +106,62 @@ $(function() {
   </header>
 
   <p>
-    An introduction here.
+    Work in progress.
   </p>
 
-  <h2>Prerequisites</h2>
-  <p>
-    Before continuing with this reading, you need to have a very basic knowledge of HTML and maybe some CSS. This is because Javascript will be embeded in an HTML page, which can also have CSS stylings.
-  </p>
 
-  <p>
-    If you haven't learn anything about HTML and CSS or you don't know what I'm talking about, I recommend you start at least the very basics. Here is a short list with resources you can start learning from.
-  </p>
-
-  <ul>
-    <h4>HTML</h4>
-    <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools</a></li>
-
-    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">HTML MDN web docs (mozilla)</a></li>
-
-    <h4>CSS</h4>
-    <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a></li>
-
-    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">CSS MDN web docs (mozilla)</a></li>
-
-    <h4>HTML and CSS</h4>
-
-    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
-
-    <li><a href="https://www.htmlandcssbook.com/" target="_blank">HTML and CSS from Jon Duckett</a></li>
-  </ul>
-
-  <p>
-    There are a lot of free and paid resources all over the internet to learn HTML and CSS. These are not hard to learn compared to Javascript, but everything takes time to sink in (at least in my case).
-  </p>
-
-  <h2>Examples</h2>
+  <h2>Examples</h2> 
 
   <pre><code>
-    &lt;html&gt;
-      &lt;body&gt;
-        &lt;h1&gt;My first Javascript !&lt;/h1&gt;
-      &lt;/body&gt;
-    &lt;/html&gt;   
-  </code></pre>  
+    
+    &lt;script&gt;
+      const btns = document.querySelectorAll('button');
 
-  <button>Change color</button>
+      function random(number) {
+        return Math.floor(Math.random() * (number+1));
+      }
+
+      for (let i=0; i&lt;btns.length; i++) {
+        const event = btns[i].id;
+        btns[i].addEventListener(event, () => {
+          const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+          btns[i].style.backgroundColor = rndCol;
+        });
+      }
+    &lt;/script&gt;
+    
+  </pre></code>
+
+
+  <button id="click" class="jsEventButton">Event: click</button>
+  <button id="dblclick" class="jsEventButton">Event: double click</button>
+  <button id="mousedown" class="jsEventButton">Event: mouse down</button>
+  <button id="mouseup" class="jsEventButton">Event: mouse up</button>
+  <button id="mousemove" class="jsEventButton">Event: mouse move</button>
+  <button id="mouseover" class="jsEventButton">Event: mouse over</button>
+  <button id="mouseout" class="jsEventButton">Event: mouse out</button>
+
   <script>
-    const btn = document.querySelector('button');
+    const btns = document.querySelectorAll('button');
 
     function random(number) {
       return Math.floor(Math.random() * (number+1));
     }
 
-    btn.addEventListener('click', () => {
-      const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-      //document.body.style.backgroundColor = rndCol;
-      btn.style.backgroundColor = rndCol;
-    });    
+    for (let i=0; i<btns.length; i++) {
+      const event = btns[i].id;
+      btns[i].addEventListener(event, () => {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        btns[i].style.backgroundColor = rndCol;
+      });
+    }
+       
   </script>
 
   <h2>Sources</h2>
   <hr>
   <p>
-    <a id="citeNote1" href="#citeRef1">[1]</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Window/alert</a>
+    <a id="citeNote1" href="#citeRef1">[1]</a> <a href="https://developer.mozilla.org/es/docs/Web/API/Document/querySelectorAll" target="_blank">https://developer.mozilla.org/es/docs/Web/API/Document/querySelectorAll</a>
   </p>
 
 
