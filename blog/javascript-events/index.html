@@ -141,6 +141,26 @@ $(function() {
   <button id="mouseover" class="jsEventButton">Event: mouse over</button>
   <button id="mouseout" class="jsEventButton">Event: mouse out</button>
 
+
+  <span>Traditional DOM event handlers</span>
+  <input type="text" id="username1">
+  <br>
+
+  <span>Event listeners</span>
+  <input type="text" id="username2">
+  <br>
+
+  <span>Using parameters</span>
+  <input type="text" id="username3">
+  <br>
+
+  <span>Event Flow</span>
+  
+  <button><ul id="list1"><li id="item1"><a id="link1">Capturing phase</a></li></ul></button>
+
+  <button><ul id="list2"><li id="item2"><a id="link2">Bubbling phase</a></li></ul></button>
+    
+
   <script>
     const btns = document.querySelectorAll('button');
 
@@ -155,6 +175,48 @@ $(function() {
         btns[i].style.backgroundColor = rndCol;
       });
     }
+
+
+    function checkUsername() {
+            alert('testing!');
+        }
+
+        function checkUsername2(n) {
+            alert('testing with ' + n);
+        }
+
+        var el1 = document.getElementById("username1");
+        el1.onblur = checkUsername;
+
+        var el2 = document.getElementById("username2");
+        el2.addEventListener('blur', checkUsername, false); // third parameter is 'capture'
+
+        var el3 = document.getElementById("username3");
+        el3.addEventListener('blur', function() {
+            checkUsername2(5);
+        }, false);
+
+        function alertBoxShowContents() {
+            alert(this.innerHTML);
+        }
+
+        var el = document.getElementById("list1");
+        el.addEventListener('click', alertBoxShowContents, true);
+        
+        var el = document.getElementById("item1");
+        el.addEventListener('click', alertBoxShowContents, true);
+
+        var el = document.getElementById("link1");
+        el.addEventListener('click', alertBoxShowContents, true);
+
+        var el = document.getElementById("list2");
+        el.addEventListener('click', alertBoxShowContents, false);
+        
+        var el = document.getElementById("item2");
+        el.addEventListener('click', alertBoxShowContents, false);
+
+        var el = document.getElementById("link2");
+        el.addEventListener('click', alertBoxShowContents, false);
        
   </script>
 

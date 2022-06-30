@@ -11,6 +11,7 @@ body {
   transition: ease 1s;
   font-size: 16px;
   line-height: 1.75;
+  overflow-wrap: break-word;
 }
 
 .author {
@@ -42,15 +43,19 @@ a:link, a:visited, a:hover, a:active {
   padding: 60px 30px;
 }
 
+/*
 .meta {
 }
+*/
 
 .header *{
   margin-top: 15px;
 }
 
+/*
 .header {
 }
+*/
 
 .category {
   text-transform: uppercase;
