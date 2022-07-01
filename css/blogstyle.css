@@ -43,19 +43,9 @@ a:link, a:visited, a:hover, a:active {
   padding: 60px 30px;
 }
 
-/*
-.meta {
-}
-*/
-
 .header *{
   margin-top: 15px;
 }
-
-/*
-.header {
-}
-*/
 
 .category {
   text-transform: uppercase;
@@ -268,5 +258,8 @@ code {
     font-size: 13px;
   }
 
+  img {
+    width: 100%;
+  }
 
 }
