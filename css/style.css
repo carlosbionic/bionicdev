@@ -84,35 +84,34 @@ canvas {
 	right: 0;
 	/*margin-top: 30px;*/
 	margin: auto;
-  	height: 25vh;
-  
+  	height: 20vh;
 	text-align: center;
 	border: 0px solid red;
 }
 
 .main-title {
 	font-size: 80px;
-	margin: auto;
-  	height: 25vh;
+	margin: 70px auto auto auto;
+  	height: 20vh;
 	/*margin-top: 150px;*/
 }
 
 .main-subtitle1 {
 	font-size: 40px;
 	margin: auto;
-  	height: 25vh;
-	/*margin-top: 250px*/
+  	height: 20vh;
+	/*margin-top: 200px*/
 }
 
 .main-subtitle2 {
 	margin: auto;
-  	height: 25vh;
+  	height: 20vh;
 	font-size: 35px;
 }
 
 .main-subtitle3 {
 	margin: auto;
-  	height: 25vh;
+  	height: 20vh;
 	font-size: 35px;
 }
 
@@ -288,12 +287,13 @@ canvas {
 
 	.main-title {
 		font-size: 40px;
+		margin: 100px auto auto auto;
 		/*margin-top: 80px;*/
 	}
 
-	.main-subtitle1 {
-		/*margin-top: 80px;*/
-	}
+	/*.main-subtitle1 {
+		margin-top: 80px;
+	}*/
 
 	.main-subtitle1, .main-subtitle2, .main-subtitle3 {
 		font-size: 20px;
