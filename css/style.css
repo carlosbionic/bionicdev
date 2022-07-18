@@ -47,6 +47,23 @@ p {
 	margin: 20px;
 }
 
+a:link { color: lightskyblue; text-decoration:none; }
+a:visited { color: lightskyblue; }
+a:hover { color: #ffffff; }
+a:active { color: #ff4040;  font-weight:normal; }
+
+ul#tldr {
+	list-style: none;
+	padding: 0;
+}
+
+ul#tldr li:before {
+	content: '\2713';
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0 1em;
+}
+
 canvas {
 	display: block;
 	/*vertical-align: bottom;*/
@@ -116,8 +133,7 @@ canvas {
 	font-size: 35px;
 }
 
-
-.portfolioItems {
+.portfolioItems , .brandItems {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
 	column-gap: 5px;
@@ -207,6 +223,8 @@ canvas {
 	margin-left: -35%;
 	margin-top: -35%;
 	filter: opacity(0.7);
+	background: rgb(255, 255, 255);
+	box-shadow: 0 0 20px 10px #fff;
 	transition: 0.5s ease;	
 }
 
@@ -259,7 +277,8 @@ canvas {
 
 .card-bottom {
   position: absolute;
-  background: #131313;
+  background: #fff;
+  color: #000;
   height: 50%;
   width: 100%;
   top: 50%;
@@ -269,8 +288,7 @@ canvas {
 .card-bottom p {
   border: 0px solid #fff;
   margin: 50px 10px 0 10px;
-  font-size: 15px;
-  color: #fff;
+  font-size: 18px;
   position: absolute;
   top: 40%;
   -ms-transform: translateY(-50%);
@@ -279,7 +297,6 @@ canvas {
 
 .card-bottom h3 {
 	margin: 10px;
-	color: #fff;
 	font-size: 25px;	
 }
 
@@ -300,8 +317,12 @@ canvas {
 		font-size: 20px;
 	}
 
-	.portfolioItems {
+	.brandItems {
 		grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	}
+
+	.portfolioItems {
+		grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
 	}
 
 
